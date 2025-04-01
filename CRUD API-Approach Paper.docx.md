@@ -4,41 +4,40 @@
 
 **Approach Paper \- CRUD API Using Quarkus**	1
 
-[1\. Objective	1](#1.-objective)
+**Objective**
 
-[2\. Proposed Solutions	2](#2.-proposed-solutions)
+**Proposed Solutions**
 
-[Approach 1 (Chosen Approach):	2](#approach-1:)
+**Approach 1 (Chosen Approach)**
 
-[Chosen Approach: Approach 1	2](#chosen-approach:-approach-1)
+**Chosen Approach: Approach**	
 
-[3\. Approach 1: Details	2](#3.-approach-1:-details)
+**Approach 1: Details**
 
-[3.1. Architecture Diagram	2](#3.1.-architecture-diagram)
+**Architecture Diagram**
 
-[3.2. Description	3](#3.2.-description)
+**Description**
 
-[3.3. Pre-requisites	4](#3.3.-pre-requisites)
+**Pre-requisites**	
 
-[3.3.1. Hardware Requirements	4](#3.3.1.-hardware-requirements)
+**Hardware Requirements**	
 
-[3.3.2. Software Requirements	4](#3.3.2.-software-requirements)
+**Software Requirements**
 
-[3.3.3. Networking Requirements	4](#3.3.3.-networking-requirements)
+**Networking Requirements**
 
-[Conclusion	4](#conclusion)
+**Conclusion**
 
 ---
 
-## 
 
-## **1\. Objective** {#1.-objective}
+## **1\. Objective**
 
 The objective of this project is to develop a robust, scalable, and efficient CRUD API using Quarkus. The system includes API development, database integration, load balancing, and containerization to ensure high availability and performance.
 
-## **2\. Proposed Solutions** {#2.-proposed-solutions}
+## **2\. Proposed Solutions**
 
-### **Approach 1:** {#approach-1:}
+### **Approach 1:**
 
 * **Develop RESTful APIs using Quarkus** to handle CRUD operations.  
 * **Integrate MySQL database** for data storage and retrieval.  
@@ -47,7 +46,7 @@ The objective of this project is to develop a robust, scalable, and efficient CR
 
 ### 
 
-### **Chosen Approach: Approach 1** {#chosen-approach:-approach-1}
+### **Chosen Approach: Approach 1**
 
 **Reasons for choosing Approach 1:**
 
@@ -58,21 +57,14 @@ The objective of this project is to develop a robust, scalable, and efficient CR
 
 ## 
 
-## **3\. Approach 1: Details** {#3.-approach-1:-details}
+## **3\. Approach 1: Details**
 
-### **3.1. Architecture Diagram** {#3.1.-architecture-diagram}
+### **3.1. Architecture Diagram**
 
                             
 ![image1](images/image10.png)
 
-
-### 
-
-### 
-
-### 
-
-### **3.2. Description** {#3.2.-description}
+### **3.2. Description**
 
 * **Quarkus for API Development**:  
   * Develop RESTful APIs supporting CRUD operations (Create, Read, Update, Delete).  
@@ -101,13 +93,13 @@ The objective of this project is to develop a robust, scalable, and efficient CR
 
 ### 
 
-### **3.3. Pre-requisites** {#3.3.-pre-requisites}
+### **Pre-requisites**
 
-#### **3.3.1. Hardware Requirements** {#3.3.1.-hardware-requirements}
+#### **Hardware Requirements**
 
 * Laptop/Desktop with at least **4GB RAM**.
 
-#### **3.3.2. Software Requirements** {#3.3.2.-software-requirements}
+#### **Software Requirements**
 
 * Ubuntu (Version: 20.04 or later)  
 * Java (Version: 17.0.13)  
@@ -116,7 +108,7 @@ The objective of this project is to develop a robust, scalable, and efficient CR
 * Podman for containerization(Version: 4.9.3)  
 * NGINX(Version: 1.26.3) 
 
-#### **3.3.3. Networking Requirements** {#3.3.3.-networking-requirements}
+#### **Networking Requirements**
 
 * Internet connection for pulling dependencies and container images.
 
@@ -124,7 +116,7 @@ The objective of this project is to develop a robust, scalable, and efficient CR
 
 ## 
 
-## **Conclusion** {#conclusion}
+## **Conclusion**
 
 Approach is chosen as it provides a balanced, efficient, and scalable solution for CRUD API development using Quarkus. It ensures high availability, structured data management, and seamless deployment while keeping the system cost-effective and maintainable.
 
