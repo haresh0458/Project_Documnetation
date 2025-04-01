@@ -42,9 +42,6 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 
 [**STEP 3: Setting Up the Quarkus Environment	6**]
 
-![image1](images/image11.png)
-
-
 [Downloaded quarkus project using quarkus.io	6](#downloaded-quarkus-project-using-quarkus.io)
 
 [Output Shown:	7](#output-shown:-2)
@@ -59,23 +56,13 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 
 [4.1 createDocument	8](#4.1-createdocument)
 
-![image1](images/image12.png)
-
-
 [4.2 readDocument	9](#4.2-readdocument)
-
-![image1](images/image13.png)
 
 
 [4.3 updateDocument:	10](#4.3-updatedocument:)
 
-![image1](images/image14.png)
-
 
 [4.4 DeleteDocument:	11](#4.4-deletedocument:)
-
-![image1](images/image15.png)
-
 
 [Output Shown:	11](#output-shown:-3)
 
@@ -114,9 +101,6 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 [Set Nginx conf file for least connection load balancing	20](#set-nginx-conf-file-for-least-connection-load-balancing)
 
 [Verify it is deployed:	21](#heading=h.hy6p24tmblql)
-
-![image1](images/image16.png)
-
 
 
 
@@ -180,17 +164,14 @@ podman ps
 | haresh-singh@haresh-singh-C340:\~$ podman exec \-it mysql bashbash\-5.1\# mysql \-u Haresh \-pEnter password:Welcome to the MySQL monitor.  Commands end with ; or \\g.Your MySQL connection id is 14Server version: 9.1.0 MySQL Community Server \- GPLCopyright (c) 2000, 2024, Oracle and/or its affiliates.Oracle is a registered trademark of Oracle Corporation and/or itsaffiliates. Other names may be trademarks of their respectiveowners.Type 'help;' or '\\h' for help. Type '\\c' to clear the current input statement.mysql\> use quarkusdb;Reading table information for completion of table and column namesYou can turn off this feature to get a quicker startup with \-ADatabase changedmysql\> show databases;\+\--------------------+| Database       	|\+\--------------------+| information\_schema || performance\_schema || quarkusdb      	|\+\--------------------+3 rows in set (0.01 sec)mysql\> |
 | :---- |
 
-#### 
-
-####  ---
-
-## 
 
 ## **STEP 3: Setting Up the Quarkus Environment** {#step-3:-setting-up-the-quarkus-environment}
 
 ### **Downloaded quarkus project using quarkus.io** {#downloaded-quarkus-project-using-quarkus.io}
 
-### **![][image1]**    **These dependencies are use:** 
+![image1](images/image11.png) 
+
+ **These dependencies are use:** 
 
 | RESTEasy Classic JacksonJDBC Driver \- MySQL Hibernate ORM RESTEasy Classic  |
 | :---- |
@@ -230,7 +211,8 @@ Created file UserResource.java for handling Restful API and it provides CRUD ope
 | :---- |
 
 **Output Shown:**  
-**![][image2]**
+
+![images](images/image12.png)
 
 ####  **4.2 readDocument** {#4.2-readdocument}
 
@@ -238,7 +220,7 @@ Created file UserResource.java for handling Restful API and it provides CRUD ope
 | :---- |
 
 **Output Shown:**  
-**![][image3]**
+![images](images/image13.png)
 
 #### **4.3 updateDocument:** {#4.3-updatedocument:}
 
@@ -246,7 +228,7 @@ Created file UserResource.java for handling Restful API and it provides CRUD ope
 | :---- |
 
 **Output Shown:**  
-**![][image4]**  
+![images](images/image14.png) 
 	
 
 #### **4.4 DeleteDocument:** {#4.4-deletedocument:}
@@ -256,7 +238,10 @@ Created file UserResource.java for handling Restful API and it provides CRUD ope
 
     	
 
-### **Output Shown:** **![][image5]** {#output-shown:-3}
+**Output Shown:** 
+
+![images](images/image15.png)
+
 
 ## **STEP:05 Created User.java file**  {#step:05-created-user.java-file}
 
@@ -350,15 +335,7 @@ Second instance
 | f18a33923184  docker.io/library/nginx:latest   	nginx \-g daemon o...  5 days ago  Up 22 minutes  0.0.0.0:3306-\>3306/tcp, 0.0.0.0:8080-\>8080/tcp, 0.0.0.0:8081-\>80/tcp, 0.0.0.0:8082-8083-\>8082-8083/tcp  nginx-container |
 | :---- |
 
-### 
 
-### 
-
-### 
-
-### 
-
-### 
 
 ### **Set Nginx conf file for least connection load balancing**  {#set-nginx-conf-file-for-least-connection-load-balancing}
 
@@ -370,7 +347,7 @@ Second instance
 | podman exec nginx-container nginx \-tnginx: the configuration file /etc/nginx/nginx.conf syntax is oknginx: configuration file /etc/nginx/nginx.conf test is successful |
 | :---- |
 
-### **![][image6]**
+![imags](images/image16.png)
 
 ### 
 

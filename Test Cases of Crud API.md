@@ -12,27 +12,26 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 
 **Table of Content:**
 
-[**Test Case 1 Valid Request GET to Fetch All Records	3**](#test-case-1:-valid-request-get-to-fetch-all-records)
+**Test Case 1 Valid Request GET to Fetch All Records**
 
-[**Test Case 2 Valid Request POST to Add a New Record	4**](#test-case-2:-valid-request-post-to-add-a-new-record)
+**Test Case 2 Valid Request POST to Add a New Record**
 
-[**Test Case 3 Valid Request PUT to Update a Record	5**](#test-case-3:-valid-request-put-to-update-a-record)
+**Test Case 3 Valid Request PUT to Update a Record**
 
-[**Test Case 4 Valid Request DELETE to Remove a Record	6**](#test-case-4:-valid-request-delete-to-remove-a-record)
+**Test Case 4 Valid Request DELETE to Remove a Record**
 
-[**Test Case 5 Invalid Request GET for a Non-Existing Record	7**](#test-case-5:-invalid-request-get-for-a-non-existing-record)
+**Test Case 5 Invalid Request GET for a Non-Existing Record**
 
-[**Test Case 6 Valid MySQL Container Connectivity**](#test-case-6:-valid-mysql-container-connectivity)	**8**
+**Test Case 6 Valid MySQL Container Connectivity**
 
-[**Test Case 7 MySQL Container Failure Handling**](#test-case-7:-mysql-container-failure-handling)	[**9**](#and)
+**Test Case 7 MySQL Container Failure Handling**
 
-[**Test Case 8 Load Balancer NGINX Distributes Traffic	10**](#test-case-8:-load-balancer-nginx-distributes-traffic)
+**Test Case 8 Load Balancer NGINX Distributes Traffic**
 
-[**Test Case 9 Load Balancer Handles Instance Failure	11**](#test-case-9:-load-balancer-handles-instance-failure)
-
+**Test Case 9 Load Balancer Handles Instance Failure**
 ### 
 
-### **Test Case 1: Valid Request GET to Fetch All Records** {#test-case-1:-valid-request-get-to-fetch-all-records}
+**Test Case 1: Valid Request GET to Fetch All Records**
 
 |  Scenario |  | Scenario: Fetch all data from the mysql database without specifying any query parameters. |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
@@ -61,7 +60,7 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 ![image2](images/image2.png)
 
 
-### **Test Case 3: Valid Request PUT to Update a Record** {#test-case-3:-valid-request-put-to-update-a-record}
+### **Test Case 3: Valid Request PUT to Update a Record** 
 
 | Scenario |  | Update an existing record in the database. |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
@@ -74,7 +73,7 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 ![image3](images/image3.png)
 
 
-### **Test Case 4: Valid Request DELETE to Remove a Record** {#test-case-4:-valid-request-delete-to-remove-a-record}
+### **Test Case 4: Valid Request DELETE to Remove a Record** 
 
 |  Scenario |  | Delete an existing record from the database. |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
@@ -87,7 +86,7 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 ![image4](images/image4.png)
 
 
-### **Test Case 5: Invalid Request GET for a Non-Existing Record** {#test-case-5:-invalid-request-get-for-a-non-existing-record}
+### **Test Case 5: Invalid Request GET for a Non-Existing Record**
 
 | Scenario |  | Fetch details of a non-existing record from the database. |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
@@ -100,7 +99,7 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 ![image5](images/image5.png)
 
 
-### **Test Case 6: Valid MySQL Container Connectivity** {#test-case-6:-valid-mysql-container-connectivity}
+### **Test Case 6: Valid MySQL Container Connectivity** 
 
 | Scenario |  | Verify that the API can successfully connect to the MySQL container. |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
@@ -114,7 +113,7 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 
 ### 
 
-### **Test Case 7: MySQL Container Failure Handling** {#test-case-7:-mysql-container-failure-handling}
+### **Test Case 7: MySQL Container Failure Handling**
 
 | Scenario |  | Verify the behavior of the API when the MySQL container is unavailable.  |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
@@ -126,7 +125,7 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 
 ![image7](images/image7.png)
 
-### **Test Case 8: Load Balancer NGINX Distributes Traffic** {#test-case-8:-load-balancer-nginx-distributes-traffic}
+### **Test Case 8: Load Balancer NGINX Distributes Traffic** 
 
 | Scenario |  | Verify that the NGINX load balancer distributes traffic across all API instances.  |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
@@ -140,7 +139,7 @@ The goal of this project is to set up a Quarkus-based CRUD API integrated with M
 
 ### 
 
-### **Test Case 9: Load Balancer Handles Instance Failure** {#test-case-9:-load-balancer-handles-instance-failure}
+### **Test Case 9: Load Balancer Handles Instance Failure**
 
 | Scenario |  | Verify that the NGINX load balancer handles failures when one or more API instances are unavailable.  |  |  |  |
 | :---- | ----- | :---- | :---- | :---- | :---- |
