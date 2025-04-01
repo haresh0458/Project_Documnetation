@@ -103,15 +103,15 @@ Set Nginx conf file for least connection load balancing
 Verify it is deployed:
 
 
-1. # **PREREQUISITES** {#prerequisites}
+1. # **PREREQUISITES** 
 
-## **1.1 Hardware Requirements** {#1.1-hardware-requirements}
+## **1.1 Hardware Requirements** 
 
 * CPU: Minimum 2 Cores  
 * RAM: Minimum 4GB  
 * Storage: Minimum 10GB Free Space
 
-## **1.2 Software Requirements** {#1.2-software-requirements}
+## **1.2 Software Requirements**
 
 * Ubuntu (Version: 20.04 or later)  
 * Java (Version: 17.0.13)  
@@ -120,7 +120,7 @@ Verify it is deployed:
 * Podman for containerization  
 * NGINX(Version: 1.26.3) 
 
-## **1.3 Network Requirements** {#1.3-network-requirements}
+## **1.3 Network Requirements**
 
 * Open ports: 8080 (Quarkus API), 8081 (NGINX Load Balancer)  
 * Internal network communication between API instances and database  
@@ -130,23 +130,21 @@ Verify it is deployed:
 
 # 
 
-## **STEP 1: Create the Pod** {#step-1:-create-the-pod}
+## **STEP 1: Create the Pod** 
 
 Before running containers, create a pod to ensure all services share the same network and communicate properly.
 
-### **Command Executed:** {#command-executed:}
+### **Command Executed:** 
 
 ```
 podman pod create --name quarkus-pod -p 8080:8080 -p 8081:80 -p 8082:8082 -p 8083:8083 -p 3306:3306
 ```
-### **Output Shown:** {#output-shown:}
+### **Output Shown:** 
 
 ```
 f58a14129220  localhost/podman-pause:4.9.3-0                         	5 days ago  Up 26 minutes  0.0.0.0:3306->3306/tcp, 0.0.0.0:8080->8080/tcp, 0.0.0.0:8081->80/tcp, 0.0.0.0:8082-8083->8082-8083/tcp  1323057010ca-infra
 ```
-## **STEP 2: Create MySQL Database Container** {#step-2:-create-mysql-database-container}
-
-### **Command executed:** {#command-executed:-1}
+## **STEP 2: Create MySQL Database Container** 
 
 ```
 podman run -d \
@@ -160,14 +158,13 @@ podman run -d \
 mysql:latest
 
 ```
-### **Output shown:** {#output-shown:-1}
-
+### **Output shown:** 
 podman ps
 
 ```
 a55c10f7095a  docker.io/library/mysql:latest   	mysqld            	5 days ago  Up 33 minutes  0.0.0.0:3306->3306/tcp, 0.0.0.0:8080->8080/tcp, 0.0.0.0:8081->80/tcp, 0.0.0.0:8082-8083->8082-8083/tcp  mysql
 ```
-#### **Verify it is deployed:** {#verify-it-is-deployed:}
+#### **Verify it is deployed:**
 
 ```
 haresh-singh@haresh-singh-C340:~$ podman exec -it mysql bash
@@ -203,9 +200,9 @@ mysql> show databases;
 mysql>
 ```
 
-## **STEP 3: Setting Up the Quarkus Environment** {#step-3:-setting-up-the-quarkus-environment}
+## **STEP 3: Setting Up the Quarkus Environment** 
 
-### **Downloaded quarkus project using quarkus.io** {#downloaded-quarkus-project-using-quarkus.io}
+### **Downloaded quarkus project using quarkus.io** 
 
 ![image1](images/image11.png) 
 
@@ -222,7 +219,7 @@ RESTEasy Classic
 
 ### 
 
-### **Output Shown:** {#output-shown:-2}
+### **Output Shown:** 
 
 ```
 haresh-singh@haresh-singh-C340:~/quarkus-crud$ ls -lrt
@@ -238,9 +235,9 @@ drwxrwxr-x  2 haresh-singh haresh-singh  4096 Jan 27 17:20 secondinstance
 drwxrwxr-x  2 haresh-singh haresh-singh  4096 Jan 27 17:22 thirdinstance
 drwxrwxr-x 10 haresh-singh haresh-singh  4096 Feb 10 11:15 target
 ```
-### **Verify Deployment:** {#run-the-following-command:}
+### **Verify Deployment:** 
 
-### **Run the following command:** {#run-the-following-command:}
+### **Run the following command:**
 
 ```
 mvn quarkus:dev
@@ -249,14 +246,14 @@ mvn quarkus:dev
 
 ## 
 
-## **STEP:04 Created file UserResource.java**  {#step:04-created-file-userresource.java}
+## **STEP:04 Created file UserResource.java**
 
 Created file UserResource.java for handling Restful API and it provides CRUD operations.
 
 **Implementing CRUD Operations:**  
 **Implement the following methods in UserResource.java:**
 
-#### **4.1 createDocument** {#4.1-createdocument}
+#### **4.1 createDocument** 
 
 ```	
 
@@ -273,7 +270,7 @@ Created file UserResource.java for handling Restful API and it provides CRUD ope
 
 ![images](images/image12.png)
 
-####  **4.2 readDocument** {#4.2-readdocument}
+####  **4.2 readDocument** 
 
 ```
 @GET
@@ -298,7 +295,7 @@ Created file UserResource.java for handling Restful API and it provides CRUD ope
 **Output Shown:**  
 ![images](images/image13.png)
 
-#### **4.3 updateDocument:** {#4.3-updatedocument:}
+#### **4.3 updateDocument:**
 
 ```
 @PUT
@@ -327,7 +324,7 @@ Created file UserResource.java for handling Restful API and it provides CRUD ope
 ![images](images/image14.png) 
 	
 
-#### **4.4 DeleteDocument:** {#4.4-deletedocument:}
+#### **4.4 DeleteDocument:** 
 
 ```
 @DELETE
@@ -357,7 +354,7 @@ return Response.ok(user).build();
 ![images](images/image15.png)
 
 
-## **STEP:05 Created User.java file**  {#step:05-created-user.java-file}
+## **STEP:05 Created User.java file** 
 
 The class fields name, email, and school store user-related information and are mapped to corresponding columns in the User table as attributes of a User entity using JPA with Hibernate.
 ```
@@ -372,7 +369,7 @@ public class User {
 ```
 ## 
 
-## **STEP:06 Created application.properties file** {#step:06-created-application.properties-file}
+## **STEP:06 Created application.properties file**
 
 The properties added configure the MySQL database connection, enable Hibernate ORM with automatic schema updates and SQL logging, optimize database connection pooling, and set up the HTTP server to bind on all interfaces and run on port 8080\.
 
@@ -400,7 +397,7 @@ quarkus.http.port=8080
 
 ## 
 
-## **STEP:07 Created Docker file:** {#step:07-created-docker-file:}
+## **STEP:07 Created Docker file:** 
 
 ```
 FROM openjdk:17-jdk
@@ -436,14 +433,14 @@ ENTRYPOINT ["java", "-jar", "/deployments/quarkus-run.jar"]
 ```
 ## 
 
-## **STEP:08 Create JAR file**  **Command Executed:** {#step:08-create-jar-file-command-executed:}
+## **STEP:08 Create JAR file**  **Command Executed:** 
 
 ```
 mvn clean package
 
 ```
 
-### **Output Shown:** {#output-shown:-4}
+### **Output Shown:** 
 
 ```
 mvn clean package
@@ -491,16 +488,16 @@ completed in 3264ms
 [INFO] Finished at: 2025-02-11T17:00:50+05:30
 ```
 
-## **STEP:09 Containerization for API** {#step:09-containerization-for-api}
+## **STEP:09 Containerization for API** 
 
-1) ### **Build image** {#build-image}
+1) ### **Build image**
 
 **Command executed:** 
 ```
 podman build -t quarkus-crud-image -f  src/main/docker/Dockerfile.jvm
 ```    
 
-###        **Output Shown:** {#output-shown:-5}
+###        **Output Shown:**
 
 ```
 haresh-singh@haresh-singh-C340:~$ podman images
@@ -511,7 +508,7 @@ docker.io/library/nginx   	latest  	9bea9f2796e2  2 months ago  196 MB
 docker.io/library/mysql   	latest  	56a8c14e1404  3 months ago  621 MB
 docker.io/library/openjdk 	17-jdk  	5e28ba2b4cdb  2 years ago   475 MB
 ```
-### **b)  Create quarkus instances** {#b)-create-quarkus-instances}
+### **b)  Create quarkus instances**
 
 First instance
 
@@ -526,7 +523,7 @@ podman run -d --pod quarkus-pod --name quarkus-crud-jvm1 -e QUARKUS_HTTP_PORT=80
  podman run -d --pod quarkus-pod --name quarkus-crud-jvm2 -e QUARKUS_HTTP_PORT=8083 -e QUARKUS_DATASOURCE_URL=jdbc:mysql://mysql:3306/quarkusdb -e QUARKUS_DATASOURCE_USERNAME=Haresh -e QUARKUS_DATASOURCE_PASSWORD=Haresh@123 quarkus-crud-image
 
 ```
-### **Output Shown:** {#output-shown:-6}
+### **Output Shown:** 
 
 ```
 CONTAINER ID  IMAGE                            	COMMAND 	CREATED 	STATUS     	PORTS                                                                                               	NAMES
@@ -537,18 +534,18 @@ f58a14129220  localhost/podman-pause:4.9.3-0               	7 days ago  Up 27 se
 
 ##         **STEP:10 Create Nginx Load Balancer Container**
 
-### **Command Executed:** {#command-executed:-2}
+### **Command Executed:**
 
 ```
 podman run -d --pod quarkus-pod --name nginx-container -v /home/haresh-singh/nginx/conf:/etc/nginx:rw nginx
 ```
-### **Ensure nginx is running:** **Command executed:**  {#ensure-nginx-is-running:-command-executed:}
+### **Ensure nginx is running:** **Command executed:**
 
 ```
 podman ps
 ```
 
-### **Output Shown:** {#output-shown:-7}
+### **Output Shown:** 
 
 ```
 f18a33923184  docker.io/library/nginx:latest   	nginx -g daemon o...  5 days ago  Up 22 minutes  0.0.0.0:3306->3306/tcp, 0.0.0.0:8080->8080/tcp, 0.0.0.0:8081->80/tcp, 0.0.0.0:8082-8083->8082-8083/tcp  nginx-container
@@ -556,7 +553,7 @@ f18a33923184  docker.io/library/nginx:latest   	nginx -g daemon o...  5 days ago
 
 
 
-### **Set Nginx conf file for least connection load balancing**  {#set-nginx-conf-file-for-least-connection-load-balancing}
+### **Set Nginx conf file for least connection load balancing**  
 
 ```
 events {}
